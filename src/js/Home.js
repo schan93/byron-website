@@ -12,6 +12,7 @@ const Home = () => (
     <Header />
     <Offer />
     <TestimonialGallery />
+    <ContactForm />
     {/* <Section 
       left={
       <SectionImg

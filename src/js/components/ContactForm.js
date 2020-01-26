@@ -101,7 +101,7 @@ const ContactComponent = () => {
                     rows={5}
                   />
                 </FormGroup>
-                <div>Success message here: {status ? status.success : ''}</div>
+                {/* <div>Success message here: {status ? status.success : ''}</div> */}
                 <div style={{textAlign: 'center'}}>
                 <Button color="danger" type="submit" size="lg" disabled={isSubmitting}>Submit</Button>
                 </div>
