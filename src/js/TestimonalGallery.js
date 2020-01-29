@@ -93,13 +93,14 @@ const TestimonialGallery = () => {
 
   return (
     <SectionWrapper>
-      <h1 className="display-4">Testimonials</h1>
+      <h1 className="display-4">Why Byron?</h1>
       <style>
       {
           `.test {
-              max-width: 100%;
+              width: 100%;
               height: 80vh;
               color: black;
+              overflow: scroll;
               background-color: whitesmoke;
             }
             .carousel-control-prev-icon {

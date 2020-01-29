@@ -9,6 +9,7 @@ import {
   NavLink
 } from 'reactstrap';
 import { NavLink as ReactNavLink } from 'react-router-dom';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 const NavBar = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -18,12 +19,9 @@ const NavBar = () => {
   }
 
   return (
-    <div>
-      <Navbar light expand="md" style={{marginBottom: '30px'}}>
-        <NavbarBrand href="/">Byron Ng</NavbarBrand>
-        <NavbarToggler onClick={setCollapsed} />
-        <Collapse isOpen={collapsed} navbar>
-          <Nav className="mr-auto" navbar>
+      <Navbar light fixed="top" expand="md" style={{borderBottom: '.1px solid #e8e4e4', backgroundColor: 'white'}}>
+        <NavbarBrand href="/">Move Pain Free</NavbarBrand>
+          <Nav className="nav mr-auto" navbar>
             <NavItem>
               <NavLink tag={ReactNavLink} exact to="/" activeClassName="active">Home</NavLink>
             </NavItem>
@@ -37,9 +35,22 @@ const NavBar = () => {
               <NavLink tag={ReactNavLink} exact to="/services" activeClassName="active">Services</NavLink>
             </NavItem> */}
           </Nav>
-        </Collapse>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="https://www.facebook.com/byron.ng.188">
+                <FaFacebookF size={20} />
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://www.instagram.com/ng_byron">
+              <FaInstagram size={20} />
+              </NavLink>
+            </NavItem>
+            {/* <NavItem>
+              <NavLink tag={ReactNavLink} exact to="/services" activeClassName="active">Services</NavLink>
+            </NavItem> */}
+          </Nav>
       </Navbar>
-    </div>
 
   )
 }

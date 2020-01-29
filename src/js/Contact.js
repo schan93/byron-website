@@ -7,6 +7,7 @@ import { Row, Col } from 'reactstrap';
 const Contact = () => (
   <div>
     <ContactComponent />
+    <ContactInfo />
   </div>
 )
 

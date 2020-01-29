@@ -6,7 +6,6 @@ import Services from './Services';
 import Home from './Home';
 import { Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import ContactInfo from './components/ContactInfo';
 import { ToastContainer } from 'react-toastify';
 
 import {
@@ -41,7 +40,6 @@ const App = () => {
           draggable
           pauseOnHover
         />
-      <ContactInfo />
 
         {/* <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className="logo" style={{height: '32px', background: 'rgba(255, 255, 255, 0.2)', margin: '16px'}} />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Formik } from 'formik';
-import { Button, Form, FormGroup, Label, Input, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
 import * as yup from 'yup';
 import SectionWrapper from './SectionWrapper';
 import ContactInfo from './ContactInfo';
@@ -26,18 +26,18 @@ const ContactComponent = () => {
 
   return (
     <SectionWrapper id="contact" >
-      <h1 style={{textAlign: 'center'}} className="display-4">Get in touch</h1>
+      <h1 style={{textAlign: 'center'}} className="display-4">Let's get in touch!</h1>
       {/* <ContactInfo /> */}
       <Formik
         initialValues={{ firstName: '', lastName: '', email: '', message: ''}}
         onSubmit={async(values, actions) => {
           actions.setSubmitting(true);
           console.log("Values: ", values);
-          const emailRequest = await fetch('/api/email', {
-            method: 'POST',
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(values, null, 2)
-          })
+          // const emailRequest = await fetch('/api/email', {
+          //   method: 'POST',
+          //   headers: {"Content-Type": "application/json"},
+          //   body: JSON.stringify(values, null, 2)
+          // })
           const emailResponse = await emailRequest.json();
           console.log("Email response: ", emailResponse);
           if(emailResponse.messageId) {
@@ -66,8 +66,10 @@ const ContactComponent = () => {
                     name="firstName"
                     onChange={handleChange}
                     value={values.firstName}
+                    className={(errors.firstName && touched.firstName) ? "is-invalid" : ""}
                     placeholder="Enter your first name"
                   />
+                  <FormFeedback>Please enter a first name</FormFeedback>
                 </FormGroup>
                 <FormGroup>
                   <Label label="Last Name" style={{marginBottom: '10px', textAlign: 'left'}}>Last Name</Label>
@@ -75,8 +77,10 @@ const ContactComponent = () => {
                     name="lastName"
                     onChange={handleChange}
                     value={values.lastName}
+                    className={(errors.lastName && touched.lastName) ? "is-invalid" : ""}
                     placeholder="Enter your last name"
                   />
+                  <FormFeedback>Please enter a last name</FormFeedback>
                 </FormGroup>
                 <FormGroup>
                   <Label for="email" style={{marginBottom: '10px', textAlign: 'left'}}>Email</Label>
@@ -86,8 +90,10 @@ const ContactComponent = () => {
                     id="email"
                     onChange={handleChange}
                     value={values.email}
+                    className={(errors.email && touched.email) ? "is-invalid" : ""}
                     placeholder="john.doe@gmail.com"
                   />
+                  <FormFeedback>Please enter an email</FormFeedback>
                 </FormGroup>
                 <FormGroup>
                   <Label for="message" style={{marginBottom: '10px', textAlign: 'left'}}>Message</Label>
@@ -98,12 +104,14 @@ const ContactComponent = () => {
                     onChange={handleChange}
                     placeholder="What can I help you with?"
                     value={values.message}
+                    className={(errors.message && touched.message) ? "is-invalid" : ""}
                     rows={5}
                   />
+                  <FormFeedback>Please enter a message</FormFeedback>
                 </FormGroup>
                 {/* <div>Success message here: {status ? status.success : ''}</div> */}
                 <div style={{textAlign: 'center'}}>
-                <Button color="danger" type="submit" size="lg" disabled={isSubmitting}>Submit</Button>
+                <Button style={{backgroundColor: "#4296cb", borderColor: "#4296cb"}} type="submit" size="lg" disabled={isSubmitting}>Submit</Button>
                 </div>
               {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
             </Form>

@@ -3,28 +3,33 @@ import {
   Row, Col
 } from 'reactstrap';
 import SectionWrapper from './components/SectionWrapper';
-import { FaSearch, FaLink, FaHandshake } from 'react-icons/fa'
+import { FaSearch, FaLink, FaHandshake, FaRunning } from 'react-icons/fa'
 
 
 const Offer = () => (
   <SectionWrapper>
-    <h1 className="display-4">How it works</h1>
-    <p className="lead">I am dedicated to helping you get back on track to living a pain free life.</p>
+    <h1 className="display-4">How can I help you?</h1>
+    <p className="lead">Here are just a few of the services that can be of use.</p>
     <Row>
       <Col style={{marginTop: '20px'}}>
         <FaSearch size={100} />
-        <h2 style={{marginTop: '30px'}}>Assess</h2>
-        <p style={{textAlign: 'left', marginTop: '30px'}}>I'll investigate your joint range of motion from right to left. Next, I'll do specific muscle tests to find which muscles aren't responding well. Lastly, I'll check specific neurological pathways to find the root of your weaknesses.</p>
+        <h2 style={{marginTop: '30px'}}>Treatment</h2>
+        <p style={{textAlign: 'left', marginTop: '30px'}}>With injuries and chronic pain, there can be a a variety of things causing you pain. But now, there'll be no more guessing. By using muscle testing, I can assess the integrity of over 400 muscles in your body, look past your compensations, and effectively design treatments to rid you from yous pain/tightness.</p>
       </Col>
       <Col style={{marginTop: '20px'}}>
         <FaLink size={100} />
-        <h2 style={{marginTop: '30px'}}>Treat</h2>
-        <p style={{textAlign: 'left', marginTop: '30px'}}>With injuries and chronic pain, there can be a a variety of things causing you pain. But now, there'll be no more guessing. By using muscle testing, I can assess the integrity of over 400 muscles in your body, look past your compensations, and effectively map out patterns of weakness that may potentially be causing you pain/tightness. </p>
+        <h2 style={{marginTop: '30px'}}>Personal Training</h2>
+        <p style={{textAlign: 'left', marginTop: '30px'}}>Whether you're a beginner looking to learn how to lift, to a seasoned gym-goer who needs an extra push, I can work with you to help you look your best this year.</p>
+      </Col>
+      <Col style={{marginTop: '20px'}}>
+        <FaRunning size={100} />
+        <h2 style={{marginTop: '30px'}}>Mobility work</h2>
+        <p style={{textAlign: 'left', marginTop: '30px'}}>Have trouble just touching your toes without bending your legs? In just three months, we can work together to help you become the most flexible version of yourself.</p>
       </Col>
       <Col style={{marginTop: '20px'}}>
         <FaHandshake size={100} />
-        <h2 style={{marginTop: '30px'}}>Follow-up</h2>
-        <p style={{textAlign: 'left', marginTop: '30px'}}>Don't settle with living in pain. I will continually follow up with you to ensure you are on the right path to recovery. Know that your body is incredible at healing itself. Sometimes it just requires a nudge in the right direction.</p>
+        <h2 style={{marginTop: '30px'}}>Online Training</h2>
+        <p style={{textAlign: 'left', marginTop: '30px'}}>If we can't meet up in person, I am more than happy to communicate with you online and do weekly check-ups to see how you're doing on your fitness journey.</p>
       </Col>
     </Row>
   </SectionWrapper>

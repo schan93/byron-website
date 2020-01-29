@@ -1,9 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import SectionWrapper from './SectionWrapper';
 
 const ContactInfo = () => (
-  <SectionWrapper style={{textAlign: 'left'}}>
+  <div style={{textAlign: 'left'}}>
     <hr />
     <Row>
       <Col lg="4">
@@ -20,7 +19,7 @@ const ContactInfo = () => (
         <p>Email: trainwithbyron@gmail.com</p>
       </Col>
     </Row>
-  </SectionWrapper>
+  </div>
 )
 
 export default ContactInfo;
