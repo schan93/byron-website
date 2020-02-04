@@ -11,6 +11,6 @@ const fadeInLeft = keyframes`
 
 export default styled.div`
   position: relative;
-  animation: 1s ${fadeInLeft} ease-out;
+  transition: 1s ${fadeInLeft} ease-out;
 `;
 

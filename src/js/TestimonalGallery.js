@@ -85,15 +85,17 @@ const TestimonialGallery = () => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <TestimonialText className="lead">{item.src}</TestimonialText>
+        <TestimonialText>{item.src}</TestimonialText>
         <CarouselCaption className="text-danger" style={{fontSize: '24px'}} captionHeader={item.caption}  captionText="" />
       </CarouselItem>
     )
   })
 
   return (
+    <div>
+    <div style={{backgroundColor: 'white' , left: '0', right: '0', position: 'absolute', height: '100%', zIndex: '-1', marginTop: '20px'}}></div>
     <SectionWrapper>
-      <h1 className="display-4">Why Byron?</h1>
+      <h1>Why Byron?</h1>
       <style>
       {
           `.test {
@@ -101,7 +103,7 @@ const TestimonialGallery = () => {
               height: 80vh;
               color: black;
               overflow: scroll;
-              background-color: whitesmoke;
+              background-color: white;
             }
             .carousel-control-prev-icon {
               background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -130,6 +132,7 @@ const TestimonialGallery = () => {
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
     </SectionWrapper>
+    </div>
   )
 }
 

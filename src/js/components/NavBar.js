@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 import { NavLink as ReactNavLink } from 'react-router-dom';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import NavBarHeader from '../../assets/images/train-with-byron-header.jpg';
 
 const NavBar = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -19,8 +20,10 @@ const NavBar = () => {
   }
 
   return (
-      <Navbar light fixed="top" expand="md" style={{borderBottom: '.1px solid #e8e4e4', backgroundColor: 'white'}}>
-        <NavbarBrand href="/">Move Pain Free</NavbarBrand>
+      <Navbar light fixed="top" expand="sm" style={{borderBottom: '.1px solid #e8e4e4', backgroundColor: 'white'}}>
+        <NavbarBrand href="/">
+          <img src={NavBarHeader} />
+        </NavbarBrand>
           <Nav className="nav mr-auto" navbar>
             <NavItem>
               <NavLink tag={ReactNavLink} exact to="/" activeClassName="active">Home</NavLink>
@@ -30,6 +33,9 @@ const NavBar = () => {
             </NavItem>
             <NavItem>
               <NavLink tag={ReactNavLink} exact to="/contact" activeClassName="active">Contact</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={ReactNavLink} exact to="/testimonials" activeClassName="active">Testimonials</NavLink>
             </NavItem>
             {/* <NavItem>
               <NavLink tag={ReactNavLink} exact to="/services" activeClassName="active">Services</NavLink>

@@ -7,6 +7,7 @@ import Home from './Home';
 import { Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { ToastContainer } from 'react-toastify';
+import Testimonials from './Testimonials';
 
 import {
   Container,
@@ -16,18 +17,13 @@ import {
 
 const App = () => {
 
-  const [collapsed, setCollapsed] = useState(true);
-
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  }
-
   return (
     <Container style={{height: '100%'}}>
       <NavBar />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/services" component={Services} />
+        <Route exact path="/testimonials" component={Testimonials} />
         <Route exact path="/" component={Home} />
         <ToastContainer
           position="bottom-center"

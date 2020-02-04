@@ -45,7 +45,7 @@
     "yup": "^0.28.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js --hot",
     "server": "node -r dotenv/config src/js/server/server.js",
     "server-dev": "nodemon -r dotenv/config src/js/server/server.js",
     "build": "webpack --config webpack.prod.js"
