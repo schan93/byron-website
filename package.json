@@ -9,6 +9,7 @@
     "babel-plugin-react-css-modules": "^5.2.6",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "googleapis": "^47.0.0",
     "nodemailer": "^6.4.2",
@@ -29,7 +30,6 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "clean-webpack-plugin": "^3.0.0",
-    "cors": "^2.8.5",
     "css-loader": "^3.4.1",
     "dotenv": "^8.2.0",
     "file-loader": "^5.0.2",
@@ -46,8 +46,8 @@
     "yup": "^0.28.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js --hot",
-    "server": "node -r dotenv/config src/js/server/server.js",
+    "start-dev": "webpack-dev-server --open --config webpack.dev.js --hot",
+    "start": "node src/js/server/server.js",
     "server-dev": "nodemon -r dotenv/config src/js/server/server.js",
     "build": "webpack --config webpack.prod.js"
   }

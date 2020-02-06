@@ -74,6 +74,7 @@ app.get('/*', (req, res) => {
   });
 });
 
+const server_port = process.env.PORT || 5000;
+const server_host = process.env.HOST || '0.0.0.0';
 
-
-app.listen(port, () => console.log(`Blog app listening on port ${port}`))
+app.listen(server_port, server_host, () => console.log(`Blog app listening on port ${port}`))
