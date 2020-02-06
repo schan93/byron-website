@@ -73,7 +73,6 @@ const ContactComponent = () => {
                         onChange={handleChange}
                         value={values.firstName}
                         className={(errors.firstName && touched.firstName) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}} 
                         placeholder="Enter your first name"
                       />
                     </Col>
@@ -87,7 +86,6 @@ const ContactComponent = () => {
                         onChange={handleChange}
                         value={values.lastName}
                         className={(errors.lastName && touched.lastName) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}}
                         placeholder="Enter your last name"
                       />
                       <FormFeedback>Please enter a last name</FormFeedback>

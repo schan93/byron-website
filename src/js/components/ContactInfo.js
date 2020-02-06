@@ -4,7 +4,7 @@ import { GoLocation, GoClock, GoMail} from 'react-icons/go';
 import { FiPhoneCall } from 'react-icons/fi';
 
 const ContactInfo = () => (
-  <div style={{fontSize: '.875rem', textAlign: 'left', marginTop: '30px'}}>
+  <div style={{textAlign: 'left', marginTop: '30px'}}>
       <Row style={{marginBottom: '10px'}}>
         <Col md={2}>
           <GoLocation style={{color: 'rgba(189, 33, 33, 0.87)'}} size={30} />
