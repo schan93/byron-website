@@ -8,18 +8,20 @@ import { Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { ToastContainer } from 'react-toastify';
 import Testimonials from './Testimonials';
-import Background from '../assets/images/bannerlight.jpg'
 import {
   Container,
   Row,
   Col,
 } from 'reactstrap';
+import './style.css';
+import Background from '../assets/images/white-background.jpg'
+
 
 const App = () => {
 
   return (
-    <div style={{background: `url(${Background}) no-repeat center top, #fff`, backgroundSize: 'cover'}}>
-      <Container style={{height: '100%'}}>
+    <div className="background">
+      <Container className="container">
         <NavBar />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
@@ -39,6 +41,7 @@ const App = () => {
           />
         </Container>
     </div>
+
   );
 }
 

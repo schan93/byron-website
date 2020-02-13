@@ -8,7 +8,7 @@ import SectionWrapper from './components/SectionWrapper';
 import { FaSearch, FaLink, FaHandshake } from 'react-icons/fa'
 import Transformation from './Transformation';
 const Home = () => (
-  <div style={{  textAlign: 'center'}}>
+  <div className="home-section">
     <Header />
     <Offer />
     <Transformation />

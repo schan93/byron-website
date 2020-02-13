@@ -1,0 +1,144 @@
+h2, h4 {
+  font-weight: 400
+}
+
+input {
+  font-size: .875rem !important;
+}
+
+.background {
+    /* background: url('../assets/images/background-img-2.jpg'); */
+  /* background: url('../assets/images/white-background.jpg'); */
+}
+
+.home-section {
+  background-image: url('../assets/images/background-img-2.jpg');
+  text-align: center;
+}
+
+.about-section {
+  padding: 10px;
+}
+
+.about-description {
+  padding: 20px;
+}
+
+.transformation-img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 20px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.transformation-desc {
+  padding: 20px;
+  text-align: left;
+}
+
+.transformation-btn {
+  text-decoration: none;
+  color: white;
+}
+
+.transformation-section {
+  margin-top: 20px;
+}
+
+.nav-bar{
+  border-bottom: .1pxsolid #e8e4e4;
+  background-color: white;
+}
+
+.section-wrapper {
+  background-image: url('../assets/images/background-img-2.jpg');
+  padding: 50px 0;
+}
+
+.button-color {
+  background-color: #4296cb;
+  border-color: #4296cb;
+}
+
+.top-section-wrapper {
+  margin-top: 60px;
+}
+
+.header-section {
+  margin-top: 100px;
+}
+
+.offer-title {
+  font-size: 1.25rem;
+}
+
+.offer-img {
+  border: 0;
+  border-radius: 50%;
+  background-size: 100%;
+}
+
+.contact-section {
+  display: flex;
+}
+
+.contact-form-section {
+  border-radius: 6px;
+  padding: 0px 30px;
+  width: 70%;
+  margin-left: 20px;
+}
+
+.contact-form-title {
+  margin-bottom: 20px;
+}
+
+.contact-info-section {
+  padding: 40px 30px;
+  width: 30%;
+  margin-right: 20px;
+}
+
+.offer-img-button {
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.offer-description {
+  margin-top: 30px;
+}
+
+.offer-card {
+  color: #000;
+  margin: 10px;
+  padding: 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  background-color: white;
+}
+
+.front-page-img {
+  min-width: 200px;
+}
+
+.front-page-section {
+  background-color: transparent !important;
+  padding: 0 0 4rem 0;
+}
+
+.byron-img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 20px;
+  object-fit: cover;
+  border-radius: 20px
+}
+
+.container {
+  height: 100%;
+}
+
+p {
+  font-size: .875rem
+}

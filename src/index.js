@@ -7,7 +7,6 @@ import ScrollToTop from './js/ScrollToTop';
 
 ReactDOM.render(
   <Router>
-      {/* <ScrollToTop /> */}
       <App />
   </Router>,
   document.getElementById('app')

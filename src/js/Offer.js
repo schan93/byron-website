@@ -12,64 +12,58 @@ import OnlineTraining from '../assets/images/online-training.jpg';
 
 import SectionWrapper from './components/SectionWrapper';
 
+
 const Offer = () => {
 
-  const [modal, setModal] = useState(false);
-  const [body, setBody] = useState("");
-  const [title, setTitle] = useState("");
+  // const [modal, setModal] = useState(false);
+  // const [body, setBody] = useState("");
+  // const [title, setTitle] = useState("");
 
-  const toggle = (modalBody, modalTitle) => {
-    setModal(!modal);
-    setBody(modalBody);
-    setTitle(modalTitle);
-  }
+  // const toggle = (modalBody, modalTitle) => {
+  //   setModal(!modal);
+  //   setBody(modalBody);
+  //   setTitle(modalTitle);
+  // }
 
   return (
-    <SectionWrapper>
-      <ModalOffer
-        modal={modal}
-        toggle={toggle}
-        body={body}
-        title={title}
-      />
-      <h2 style={{fontWeight: '400', padding: '0', margin: '0', letterSpacing: '1px'}}>What can i help you with?</h2>
-      <p style={{padding: '20px', maxWidth: '700px', margin: '0 auto'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus, eros molestie lacinia dictum, erat velit ullamcorper quam, sed blandit erat nulla nec tortor. Suspendisse fermentum molestie blandit. Nunc eleifend, augue vel bibendum maximus, urna erat lacinia ex, ut scelerisque lorem orci vel justo. Aenean ultricies aliquet nulla, id consequat velit bibendum eu.</p>
+    <div className="section-wrapper">
+      <h4>What can i help you with?</h4>
       <Row>
-        <Col lg="3" style={{marginTop: '20px'}}>
-          <h4 style={{marginTop: '30px', fontWeight: '400', marginBottom: '20px', letterSpacing: '1px'}}>Isometric Strength Training</h4>
+        <Col className="offer-card">
+          <h4 className="offer-title" >Isometric Strength Training</h4>
           <p>
-            <button onClick={() => toggle("Isometric Strength Training", "IsoBody")} style={{border: '0', padding: '0', borderRadius: '50%'}}>
-              <img src={Assessment} style={{border: '0', borderRadius: '50%', backgroundSize: '100%'}} />
+            <button onClick={() => toggle("Isometric Strength Training", "IsoBody")} className="offer-img-button">
+              <img src={Assessment} className="offer-img" />
             </button>
           </p>
-          <p style={{textAlign: 'left', marginTop: '30px'}}>Is it possible to become strong without actually moving? Let me introduce you to strength training without the wear and tear.</p>
+          <p className="offer-description">Try exerting max effort into an immovable object, you may be surprised by how strong, flexible, and pain free you become. Let me guide you through the nuances of isometrics so that you may get better results in a simple, safe, and sustainable way.</p>
         </Col>
-        <Col lg="3" style={{marginTop: '20px'}}>
-          <h4 style={{marginTop: '30px', fontWeight: '400', marginBottom: '20px', letterSpacing: '1px'}}>Pain<br/>Management</h4>
+        <Col className="offer-card">
+          <h4 className="offer-title">Pain And Tightness</h4>
           <p>
-            <button onClick={() => toggle("Pain Management", "Pain Management Body")} style={{border: '0', padding: '0', borderRadius: '50%'}}>
-              <img src={PersonalTraining} style={{border: '0', borderRadius: '50%', backgroundSize: '100%'}} />
+            <button onClick={() => toggle("Pain Management", "Pain Management Body")} className="offer-img-button">
+              <img src={PersonalTraining} className="offer-img" />
             </button>
           </p>
-          <p style={{textAlign: 'left', marginTop: '30px'}}>You are not broken and you can recover. Let me help you access your mind and body’s healing potential so that you may move pain free.</p>
+          <p className="offer-description">Whether you’re experiencing pain or tightness, I may well be able to help. I utilize a non-invasive method that leverages your own body‘s healing ability to help you move pain-free. For more information, check out testimonials from my awesome clients.</p>
         </Col>
-        <Col lg="3" style={{marginTop: '20px'}}>
-          <h4 style={{marginTop: '30px', fontWeight: '400', marginBottom: '20px', letterSpacing: '1px'}}>Mind Mapping Meditation</h4>
+        <Col className="offer-card">
+          <h4 className="offer-title">Mind Mapping Meditation</h4>
           <p>
-            <button onClick={() => toggle("Mind Mapping Meditation", "Mind Mapping Meditation Body")} style={{border: '0', padding: '0', borderRadius: '50%'}}>
-              <img src={Mobility} style={{border: '0', borderRadius: '50%', backgroundSize: '100%'}} />
+            <button onClick={() => toggle("Mind Mapping Meditation", "Mind Mapping Meditation Body")} className="offer-img-button">
+              <img src={Mobility} className="offer-img" />
             </button>
           </p>
-          <p style={{textAlign: 'left', marginTop: '30px'}}>Relax after. Rejuvenate and experience mental clarity. Realign your unconscious mind to your conscious goals. </p>
+          <p className="offer-description">Realign your unconscious mind to your conscious goals.<br /> Release any unhelpful thoughts, patterns, or beliefs so that they no longer affect you in any way.</p>
         </Col>
-        <Col lg="3" style={{marginTop: '20px'}}>
-          <h4 style={{marginTop: '30px', fontWeight: '400', marginBottom: '20px', letterSpacing: '1px'}}>Online<br/>Training</h4>
+        <Col className="offer-card">
+          <h4 className="offer-title">Online Training</h4>
           <p>
-            <button onClick={() => toggle("Online Training", "Online Training Body")} style={{border: '0', padding: '0', borderRadius: '50%'}}>
-              <img src={OnlineTraining} style={{border: '0', borderRadius: '50%', backgroundSize: '100%'}} />
+            <button onClick={() => toggle("Online Training", "Online Training Body")} className="offer-img-button">
+              <img src={OnlineTraining} className="offer-img" />
             </button>
           </p>
-          <p style={{textAlign: 'left', marginTop: '30px'}}>Mobility Training - 3-6 month program. Meditation - Via video call </p>
+          <p className="offer-description">Mobility Training - 3-6 month program. Meditation - Via video call </p>
         </Col>
       </Row>
         {/* <div style={{width: '100px', marginTop: '-250px', marginRight:'-100px', padding: '60px', borderRadius: '3px', background: 'linear-gradient(60deg, #ffa726, #fb8c00)', boxShadow: '0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(255, 152, 0,.4)'}} /> */}
@@ -141,7 +135,7 @@ const Offer = () => {
           <p style={{textAlign: 'left', marginTop: '30px'}}>If we can't meet up in person, I am more than happy to communicate with you online and do weekly check-ups to see how you're doing on your fitness journey.</p>
         </Col>
       </Row> */}
-    </SectionWrapper>
+    </div>
   )
 
   // <SectionWrapper>
