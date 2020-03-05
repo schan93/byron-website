@@ -17,7 +17,7 @@ const Header = () => {
     <div className="section-wrapper top-section-wrapper header-section">
         <img className="front-page-img" src={FrontPageLogo} />
         <Jumbotron className="front-page-section">
-          <h4>I help people become strong so they can move pain-free and enjoy a life they love.</h4>
+          <h4>I help people become strong so they<br/>can move pain-free and enjoy a life they love.</h4>
         </Jumbotron>
       </div>
   )
