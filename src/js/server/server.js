@@ -74,8 +74,14 @@ app.get('/*', (req, res) => {
   });
 });
 
+const server_port = process.env.PORT || 5000;
+const server_host = process.env.HOST || '0.0.0.0';
 
+<<<<<<< HEAD
 const server_port = process.env.PORT || 5000;
 const server_host = process.env.HOST || '0.0.0.0';
 
 app.listen(server_port, server_host, () => console.log(`Blog app listening on port ${port}`))
+=======
+app.listen(server_port, server_host, () => console.log(`Blog app listening on port ${port}`))
+>>>>>>> c9cec084439eb1572ea927c207bac5ec9ed00fba

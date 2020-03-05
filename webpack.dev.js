@@ -11,12 +11,12 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'dist'),
     port: 3000,
     compress: true,
-    hot: true,
-    proxy: {
-      '/**': {
-        target: 'http://localhost:5000',
-        secure: false
-      }
-    }
+    hot: true
+    // proxy: {
+    //   '/**': {
+    //     target: 'http://localhost:5000',
+    //     secure: false
+    //   }
+    // }
   }
 });

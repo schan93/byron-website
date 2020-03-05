@@ -25,13 +25,10 @@ const ContactComponent = () => {
   }
 
   return (
-    <SectionWrapper id="contact" style={{display: "flex"}}>
-      <div style={{padding: '40px 30px', width: '30%', marginRight: '20px'}}>
-        <h4>Contact Me</h4>
-        <ContactInfo />
-      </div>
-      <div style={{borderRadius: '6px', padding: '40px 30px', width: '70%', marginLeft: '20px'}}>
-        <h4 style={{marginBottom: '20px'}}>Let's get in touch!</h4>
+    <div id="contact" className="section-wrapper top-section-wrapper contact-section">
+      <ContactInfo />
+      <div className="contact-form-section">
+        <h4 className="contact-form-title home-section">Let's get in touch!</h4>
         {/* <ContactInfo /> */}
         <Formik
           initialValues={{ firstName: '', lastName: '', email: '', message: ''}}
@@ -73,7 +70,6 @@ const ContactComponent = () => {
                         onChange={handleChange}
                         value={values.firstName}
                         className={(errors.firstName && touched.firstName) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}} 
                         placeholder="Enter your first name"
                       />
                     </Col>
@@ -87,7 +83,6 @@ const ContactComponent = () => {
                         onChange={handleChange}
                         value={values.lastName}
                         className={(errors.lastName && touched.lastName) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}}
                         placeholder="Enter your last name"
                       />
                       <FormFeedback>Please enter a last name</FormFeedback>
@@ -103,7 +98,6 @@ const ContactComponent = () => {
                         onChange={handleChange}
                         value={values.email}
                         className={(errors.email && touched.email) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}}
                         placeholder="john.doe@gmail.com"
                       />
                       <FormFeedback>Please enter an email</FormFeedback>
@@ -120,15 +114,14 @@ const ContactComponent = () => {
                         placeholder="What can I help you with?"
                         value={values.message}
                         className={(errors.message && touched.message) ? "is-invalid" : ""}
-                        style={{fontSize: '.875rem'}}
                         rows={8}
                       />
                       <FormFeedback>Please enter a message</FormFeedback>
                     </Col>
                   </FormGroup>
                   {/* <div>Success message here: {status ? status.success : ''}</div> */}
-                  <div style={{textAlign: 'center'}}>
-                  <Button style={{backgroundColor: "#4296cb", borderColor: "#4296cb"}} type="submit" size="lg" disabled={isSubmitting}>Submit</Button>
+                  <div className="home-section">
+                    <Button className="button-color" type="submit" size="lg" disabled={isSubmitting}>Submit</Button>
                   </div>
                 {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
               </Form>
@@ -136,7 +129,7 @@ const ContactComponent = () => {
           }
         </Formik>
       </div>
-    </SectionWrapper>
+    </div>
   )
   
 }

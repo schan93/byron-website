@@ -20,7 +20,7 @@ const NavBar = () => {
   }
 
   return (
-      <Navbar light fixed="top" expand="sm" style={{borderBottom: '.1px solid #e8e4e4', backgroundColor: 'white'}}>
+      <Navbar light fixed="top" expand="sm" className="nav-bar">
         <NavbarBrand href="/">
           <img src={NavBarHeader} />
         </NavbarBrand>
